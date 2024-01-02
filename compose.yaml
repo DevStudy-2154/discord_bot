@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  bot:
+    build: ./docker
+    working_dir: /var/www/html/bot
+    volumes:
+      - ./bot:/var/www/html/bot
+    tty: true
