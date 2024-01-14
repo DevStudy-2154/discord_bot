@@ -13,12 +13,13 @@ target_reaction = "ikitai"
 @client.event
 async def on_raw_reaction_add(payload):
   channel = client.get_channel(payload.channel_id)
-  message = await channel.fetch_message(payload.message_id)
   reaction = payload.emoji.name
 
   if reaction != target_reaction:
     return
 
-  print(message.system_content)
+  message_link = f'https://discord.com/channels/{config.SERVER_ID}/{channel.id}/{payload.message_id}'
+
+  await channel.send(message_link)
 
 client.run(config.DISCORD_TOKEN)
