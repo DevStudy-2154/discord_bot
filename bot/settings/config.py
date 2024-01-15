@@ -4,3 +4,4 @@ load_dotenv()
 
 DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
 SERVER_ID=os.getenv('SERVER_ID')
+INVITATION_CHANNEL_ID=os.getenv('INVITATION_CHANNEL_ID')
