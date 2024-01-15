@@ -8,7 +8,7 @@ client = discord.Client(intents=intents)
 async def on_ready():
   print("Ready!")
 
-# 動作確認(おうむ返し)
+# いきたいスタンプが押されたらお誘いチャンネルに自動でスレッドを立てる
 target_reaction = "ikitai"
 @client.event
 async def on_raw_reaction_add(payload):
